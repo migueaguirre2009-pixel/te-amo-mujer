@@ -151,7 +151,7 @@
 
     <div class="overlay" id="v-songs">
         <span class="close-btn" onclick="closeNav()">VOLVER</span>
-        <h2 style="font-family: 'Cinzel'; color: var(--gold); margin-bottom: 20px;">UNAS DE LAS MILES CANCIONES QUE ME HACEN PENSARTE</h2>
+        <h2 style="font-family: 'Cinzel'; color: var(--gold); margin-bottom: 20px;">CANCIONES QUE ME HACEN PENSARTE</h2>
         <div style="overflow-y: auto; max-height: 70vh;">
             <div class="song-card">
                 <div class="disc"></div>
@@ -188,7 +188,7 @@
 
     <div class="overlay" id="v-boom">
         <span class="close-btn" onclick="closeNav()">VOLVER</span>
-        <div class="big-heart" onclick="triggerLoveRain()">💙</div>
+        <div class="big-heart" onclick="triggerLoveRain()">🩵</div>
         <p style="margin-top: 25px; font-family: 'Cinzel'; color: var(--accent);">TOCA MI CORAZÓN</p>
     </div>
 
@@ -208,7 +208,7 @@
         <span class="close-btn" onclick="closeNav()">CERRAR</span>
         <div class="scroll-box" id="scroll-box-id">
             <div id="type-area" style="line-height: 1.8; font-size: 1.1rem; white-space: pre-line;"></div>
-            <div id="sig" style="display:none; text-align: right; font-family: 'Dancing Script'; font-size: 2.2rem; margin-top: 20px;">Miguel 💙</div>
+            <div id="sig" style="display:none; text-align: right; font-family: 'Dancing Script'; font-size: 2.2rem; margin-top: 20px;">Miguel 🩵</div>
         </div>
     </div>
 
@@ -270,7 +270,7 @@
             f.style.left = (e.clientX - rect.left - 20) + 'px';
             f.style.top = (e.clientY - rect.top - 20) + 'px';
             document.getElementById('garden-canvas').appendChild(f);
-            triggerLoveRain(8); // Lluvia de corazones al plantar
+            triggerLoveRain(8);
         }
 
         function triggerLoveRain(count = 20) {
@@ -278,7 +278,8 @@
                 setTimeout(() => {
                     const t = document.createElement('div');
                     t.className = 'falling-item';
-                    t.innerText = i % 2 === 0 ? 'Te amo Isabella' : '💙';
+                    // LLUVIA CON EL NUEVO CORAZÓN
+                    t.innerText = i % 2 === 0 ? 'Te amo Isabella' : '🩵';
                     t.style.color = '#a2d2ff';
                     t.style.left = Math.random() * 90 + 'vw';
                     t.style.fontSize = (Math.random() * 1.2 + 1) + 'rem';
@@ -293,7 +294,8 @@
             setInterval(() => {
                 const h = document.createElement('div');
                 h.className = 'falling-item';
-                h.innerHTML = '💙';
+                // CORAZONES DE FONDO ACTUALIZADOS
+                h.innerHTML = '🩵';
                 h.style.left = Math.random() * 100 + 'vw';
                 h.style.opacity = '0.3';
                 h.style.animationDuration = '6s';
